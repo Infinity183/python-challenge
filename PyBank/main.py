@@ -76,3 +76,18 @@ print(f'Total: ${net_change}')
 print(f'Average Change: ${round(float(net_change / month_counter), 2)}')
 print(f'Greatest Increase in Profits: {max_gain_month} (${max_gain_total})')
 print(f'Greatest Decrease in Profits: {max_loss_month} (${max_loss_total})')
+
+# With the terminal results now printed, we will now export the same
+# results into a .txt file in the analysis folder.
+text_path = os.path.join("PyBank", "analysis", "Analysis.txt")
+analysis = open(text_path, 'w')
+
+# Mostly, we're just printing the same things, but with different
+# syntax. We need \n at the end of every line to start a new line.
+analysis.write("Financial Analysis\n")
+analysis.write("----------------------------\n")
+analysis.write(f'Total Months: {month_counter}\n')
+analysis.write(f'Total: ${net_change}\n')
+analysis.write(f'Average Change: ${round(float(net_change / month_counter), 2)}\n')
+analysis.write(f'Greatest Increase in Profits: {max_gain_month} (${max_gain_total})\n')
+analysis.write(f'Greatest Decrease in Profits: {max_loss_month} (${max_loss_total})')

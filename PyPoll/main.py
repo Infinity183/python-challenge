@@ -114,3 +114,30 @@ print("")
 
 # We will now declare the winner.
 print(f'Looks like {winner} is headed for office!')
+
+# Okay! Now for the exported .txt version!
+text_path = os.path.join("PyPoll", "analysis", "Poll Results.txt")
+analysis = open(text_path, 'w')
+
+analysis.write("FINAL RESULTS\n")
+analysis.write("* * * * * * * *\n\n")
+analysis.write(f'Total Votes: {number_of_votes}\n\n')
+
+for j in candidate_list:
+    analysis.write(f'Votes for {j}: {candidate_counter[candidate_list.index(j)]}\n')
+    
+    # We've already built the percentage list,
+    # so no need to repeat it.
+
+analysis.write("\n")
+
+for k in candidate_percentages:
+    analysis.write(f'Percent Votes for {candidate_list[candidate_percentages.index(k)]}: {round(k * 100, 3)}%\n')
+
+# We've already defined highest_votes and winner,
+# so no need to repeat them.
+
+analysis.write("\n")
+
+# We will now declare the winner.
+analysis.write(f'Looks like {winner} is headed for office!')
