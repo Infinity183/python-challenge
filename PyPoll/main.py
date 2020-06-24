@@ -3,7 +3,7 @@ import os
 import csv
 
 # Now we'll open up the election_data csv file.
-election_data = os.path.join("PyPoll", "Resources", "election_data.csv")
+election_data = os.path.join("Resources", "election_data.csv")
 
 # I'm going to define my essential variables/empty lists for later.
 
