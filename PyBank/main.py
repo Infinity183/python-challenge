@@ -3,7 +3,7 @@ import os
 import csv
 
 # Now we must read the budget_data csv file, which is in PyBank's Resources folder.
-budget_data = os.path.join("PyBank", "Resources", "budget_data.csv")
+budget_data = os.path.join("Resources", "budget_data.csv")
 
 with open(budget_data) as csvfile:
     csv_reader = csv.reader(csvfile, delimiter=",")
