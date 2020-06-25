@@ -79,7 +79,7 @@ print(f'Greatest Decrease in Profits: {max_loss_month} (${max_loss_total})')
 
 # With the terminal results now printed, we will now export the same
 # results into a .txt file in the analysis folder.
-text_path = os.path.join("PyBank", "analysis", "Analysis.txt")
+text_path = os.path.join("analysis", "Analysis.txt")
 analysis = open(text_path, 'w')
 
 # Mostly, we're just printing the same things, but with different
