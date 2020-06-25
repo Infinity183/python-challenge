@@ -116,7 +116,7 @@ print("")
 print(f'Looks like {winner} is headed for office!')
 
 # Okay! Now for the exported .txt version!
-text_path = os.path.join("PyPoll", "analysis", "Poll Results.txt")
+text_path = os.path.join("analysis", "Poll Results.txt")
 analysis = open(text_path, 'w')
 
 analysis.write("FINAL RESULTS\n")
